@@ -37,7 +37,7 @@ Python3.7就可以用了，更高版本的可以向下兼容
 
 以使用Chrome为例：  
 打开NGA的网页，按F12进入开发者工具，在Application->Cookies里，复制自己的Cookie  
-![image](https://github.com/miosleet/NGA_AutoSave_Public/assets/43563705/982d3238-56c7-4c42-a1fe-a570410a16a1)
+![image](https://github.com/soyussleet/NGA_AutoSave_Public/assets/164469268/064ece46-4111-4f92-bcdd-3b5f1e6daea9)
 粘贴到./Settings/cookie.txt文件内  
 
 ### 3.2.设置保存网页的路径（可选）
@@ -53,9 +53,9 @@ Python3.7就可以用了，更高版本的可以向下兼容
 复制一个需要监控（自动保存）的NGA帖子的1楼的URL（如）https://bbs.nga.cn/read.php?tid=38694078  
 根据提示，新增监控URL，输入1，回车，即可选择新增监控的URL  
 粘贴刚刚复制的URL，回车，即可开始监视这个URL  
-![image](https://github.com/miosleet/NGA_AutoSave/assets/43563705/0bba8e6c-1782-4938-8069-052e2aeca85b)  
+![image](https://github.com/soyussleet/NGA_AutoSave_Public/assets/164469268/d302528e-18d9-494b-a0f8-b6d605164b36)
 在开始监视时，会自动将这个帖子里的每一页保存下来  
-后续，每3分钟会进行一次下载  
+后续，每~~3分钟~~一定时间会进行一次下载，时间间隔会浮动变化  
 
 ### 3.4.找到下载的网页
 
@@ -93,5 +93,5 @@ NGA_AutoSave.py运行时，有7个选择：4:开关版面热帖监控, 5:新增�
 5.添加监控URL必须是第一页的URL，即没有&page=...，看看要不要改（能跑就不要改.jpg）    
 6.编译为exe，虽然我觉得没有太大必要就是了  
 **我靠，这个功能我做出来了**~~7.版面热贴自动加入监视，可以监视几个特定版面，然后也定时抓一下回帖数量，超过阈值的帖子URL加入监视~~
-8.帖子TTL，超过一定时间没有新回复（或者页面数量增长），则记为坟贴，不再监视 （已完成） 
-9.峰谷刷新率，每次刷新间隔跟随时间变化而波动，以减少闲时的访问NGA的次数（已完成） 
+~~8.帖子TTL，超过一定时间没有新回复（或者页面数量增长），则记为坟贴，不再监视~~ （已完成） 
+~~9.峰谷刷新率，每次刷新间隔跟随时间变化而波动，以减少闲时的访问NGA的次数~~（已完成） 

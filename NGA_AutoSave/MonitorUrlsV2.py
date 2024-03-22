@@ -24,12 +24,12 @@ def AddUrl(targetUrl,isAutoAddHotPost=False):
     global monitoringUrls  
     if len(targetUrl)<10 or ( "http" not in targetUrl):
         print(f"{targetUrl}不合规范")
-        return
+        return False
     if '&page=' in targetUrl:#以免复制url时带上了第几页
         targetUrl = targetUrl.split('&page=')[0]
     if any(url['savedUrl'] == targetUrl for url in monitoringUrls):  
         print(f"URL {targetUrl} 已存在，不再添加。")  
-        return  
+        return False
     currentTimestamp = int(time.time())  # 当前时间戳  
     new_url_dict = {  
         "savedUrl": targetUrl,   
@@ -41,6 +41,7 @@ def AddUrl(targetUrl,isAutoAddHotPost=False):
     monitoringUrls.append(new_url_dict)  
     # 更新到文件中  
     UpdateToJson()  
+    return True
   
 def GetUrls():  
     """  

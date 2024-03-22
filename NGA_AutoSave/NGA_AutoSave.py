@@ -1,7 +1,7 @@
 from datetime import datetime  
 import json  
 import threading  
-import time  
+import time
 import DownloadMonitoringPages  
 import monitor_fid_urls_manager
 import find_hot_posts_in_monitoring_fids
@@ -41,8 +41,9 @@ def receive_input():
         if choice == '1':  
             targetUrl = input("请输入要新增的监控URL：\n")  
             #MonitorUrls.AddMonitoringUrl(new_url)  
-            MonitorUrlsV2.AddUrl(targetUrl)
-            DownloadMonitoringPages.DownloadMonitoringPages()
+            ok=MonitorUrlsV2.AddUrl(targetUrl)
+            if ok:
+                DownloadMonitoringPages.DownloadMonitoringPages()
         elif choice == '2':  
             targetUrl = input("请输入要取消监控的URL：\n")  
             #MonitorUrls.DeleteMonitoringUrl(target_url) 

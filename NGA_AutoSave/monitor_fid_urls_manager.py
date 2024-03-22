@@ -49,8 +49,10 @@ def get_hot_post_lowest_limit():
     return settings.get('hotPostLowestLimit')  
 
 def update_hot_post_lowest_limit(new_limit):  
-    """更新热帖最小值，仅当new_limit为整数时进行修改"""  
-    if not isinstance(new_limit, int):  
+    """更新热帖最小值，仅当new_limit为整数时进行修改""" 
+    try  :
+        new_limit=int(new_limit)
+    except: 
         print("热帖阈值必须是整数")  
         return False  
       

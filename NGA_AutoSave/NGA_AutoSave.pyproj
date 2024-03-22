@@ -1,0 +1,59 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6224e86f-619d-4f97-ac40-a069afaa7a72</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>NGA_AutoSave.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>NGA_AutoSave</Name>
+    <RootNamespace>NGA_AutoSave</RootNamespace>
+    <InterpreterId>
+    </InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CookieFormat.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="find_hot_posts_in_monitoring_fids.py" />
+    <Compile Include="MonitorSubForum.py" />
+    <Compile Include="MonitorUrls.py" />
+    <Compile Include="DownloadMonitoringPages.py" />
+    <Compile Include="MonitorUrlsV2.py" />
+    <Compile Include="monitor_fid_urls_manager.py" />
+    <Compile Include="NGA_AutoSave.py" />
+    <Compile Include="Utils\Paths.py" />
+    <Compile Include="Utils\M_requests.py" />
+    <Compile Include="Utils\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PageSaved\test.html" />
+    <Content Include="Settings\setting.json" />
+    <Content Include="Settings\settingTemplate.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
+    <Folder Include="PageSaved\" />
+    <Folder Include="Settings\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

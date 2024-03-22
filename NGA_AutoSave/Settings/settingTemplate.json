@@ -1,0 +1,26 @@
+{
+  "saveCycleTime": [ 180, 240, 300, 600, 1800, 1800, 1800, 600, 600, 300, 300, 300, 180, 180, 180, 240, 300, 240, 180, 180, 180, 120, 120, 180 ],
+  "monitoringUrls": [
+    {
+
+    }
+  ],
+  "saveHtmlFolderPath": "./PageSaved/",
+  "cookies": [
+    {
+
+    }
+  ],
+  "monitoringFidUrls": [
+    "https://bbs.nga.cn/thread.php?fid=428",
+    "https://bbs.nga.cn/thread.php?fid=-61285727"
+  ],
+  "hotPostLowestLimit": 100,
+  "needAutoAddHotPost": true,
+  "hotPostTitleFilter": [
+    "[评测]",
+    "[安利]",
+    "[活动]",
+    "实验型瓜田自动灌溉装置"
+  ]
+}

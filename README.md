@@ -39,6 +39,7 @@ Python3.7就可以用了，更高版本的可以向下兼容
 打开NGA的网页，按F12进入开发者工具，在Application->Cookies里，复制自己的Cookie  
 ![image](https://github.com/soyussleet/NGA_AutoSave_Public/assets/164469268/064ece46-4111-4f92-bcdd-3b5f1e6daea9)
 粘贴到./Settings/cookie.txt文件内  
+你也可以直接运行NGA_AutoSave.py，程序会在未读取到cookie.txt的内容时自动新建这个文件并打开，然后你可以粘贴进去。
 
 ### 3.2.设置保存网页的路径（可选）
 
